@@ -11,7 +11,6 @@ public class SCR_GameManager : MonoBehaviour
     public static SCR_GameManager instance;
 
     [SerializeField] private TextMeshProUGUI scoreLabel;
-    [SerializeField] private GameObject pauseMenu;
     
     private int currentScore;
     
@@ -30,8 +29,6 @@ public class SCR_GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Opens/Closes pause menu
-        if (Input.GetKeyDown(KeyCode.Escape)) pauseMenu.SetActive(!pauseMenu);
     }
 
     public void IncreasePlayerScore(int value)
