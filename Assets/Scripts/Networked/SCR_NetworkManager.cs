@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Mirror;
+using UnityEditor;
 using UnityEngine;
 
 public class SCR_NetworkManager : NetworkManager
@@ -14,6 +15,8 @@ public class SCR_NetworkManager : NetworkManager
         Transform start = numPlayers == 0 ? playerOneSpawn : playerTwoSpawn;
         GameObject player = Instantiate(playerPrefab, start.position, start.rotation);
         NetworkServer.AddPlayerForConnection(conn, player);
+        
+        
     }
 
     public override void OnServerDisconnect(NetworkConnection conn)

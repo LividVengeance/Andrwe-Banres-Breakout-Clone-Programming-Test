@@ -1,13 +1,13 @@
+using System;
 using Mirror;
 using UnityEngine;
 
-public class SCR_Ball : MonoBehaviour
+public class SCR_BallNetworked : NetworkBehaviour
 {
     [SerializeField] private float ballSpeed;
     private Rigidbody rb;
     private Vector3 ballVelocity;
-    
-    // Start is called before the first frame update
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -20,7 +20,8 @@ public class SCR_Ball : MonoBehaviour
         ballVelocity = ballVelocity.normalized * ballSpeed;
         rb.velocity = ballVelocity;
     }
-    
+
+    [ServerCallback]
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Surface"))

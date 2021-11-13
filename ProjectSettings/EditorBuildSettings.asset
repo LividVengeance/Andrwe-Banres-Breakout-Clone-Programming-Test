@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Mirror/Examples/Pong/Scenes/Scene.unity
-    guid: 89a84548859e3b643b4fb27984dc2b0d
+    path: Assets/Scenes/Muiltplayer.unity
+    guid: bd03a26bf1ea8504aaa8b22a6c707a16
   m_configObjects: {}
