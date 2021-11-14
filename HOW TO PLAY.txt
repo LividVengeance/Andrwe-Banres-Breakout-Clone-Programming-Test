@@ -1,0 +1,6 @@
+Controls:
+A: Move paddle left
+D: Move paddle right
+Space: Launch a new ball
+
+Each player has 4 balls
