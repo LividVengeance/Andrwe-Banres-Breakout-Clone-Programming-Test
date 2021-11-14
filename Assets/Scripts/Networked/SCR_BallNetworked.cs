@@ -21,7 +21,7 @@ public class SCR_BallNetworked : NetworkBehaviour
         rb.velocity = ballVelocity;
     }
 
-    [ServerCallback]
+    //[ServerCallback]
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Surface"))

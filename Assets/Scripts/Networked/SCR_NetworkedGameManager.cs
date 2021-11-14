@@ -3,9 +3,9 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SCR_GameManager : NetworkBehaviour
+public class SCR_NetworkedGameManager : NetworkBehaviour
 {
-    public static SCR_GameManager instance;
+    public static SCR_NetworkedGameManager instance;
     
     [SerializeField] private TextMeshProUGUI scoreLabel;
     [SyncVar] private int currentScore;
